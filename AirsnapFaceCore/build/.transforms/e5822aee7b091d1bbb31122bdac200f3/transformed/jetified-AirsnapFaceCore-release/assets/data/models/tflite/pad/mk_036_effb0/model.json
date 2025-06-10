@@ -1,0 +1,16 @@
+{
+    "model_file": "mk_036_effb0.tflite",
+    "normalization": "raw",
+    "inputs": [
+        {
+            "name": "x",
+            "shape": [376, 376, 3]
+        }
+    ],
+    "outputs": [
+        {
+            "name": "Identity",
+            "shape": [1]
+        }
+    ]
+}

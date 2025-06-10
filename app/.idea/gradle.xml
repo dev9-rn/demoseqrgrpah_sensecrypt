@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/.." />
+            <option value="$PROJECT_DIR$/../AirsnapFaceCore" />
+            <option value="$PROJECT_DIR$/../AirsnapFaceUI" />
+            <option value="$PROJECT_DIR$/../AirsnapFinger" />
+            <option value="$PROJECT_DIR$/../AirsnapFingerUI" />
+            <option value="$PROJECT_DIR$/../OmniMatch" />
+            <option value="$PROJECT_DIR$/../T5CryptographClient" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/../tensorflow-lite" />
+            <option value="$PROJECT_DIR$/../tensorflow-lite-select-tf-ops" />
+            <option value="$PROJECT_DIR$/../tensorflow-lite-support" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

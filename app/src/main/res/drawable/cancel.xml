@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- x_shape.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Diagonal line from top-left to bottom-right -->
+    <item>
+        <rotate
+            android:fromDegrees="45"
+            android:toDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="line">
+                <stroke android:width="4dp" android:color="#FF0000" />
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Diagonal line from top-right to bottom-left -->
+    <item>
+        <rotate
+            android:fromDegrees="-45"
+            android:toDegrees="-45"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="line">
+                <stroke android:width="4dp" android:color="#FF0000" />
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

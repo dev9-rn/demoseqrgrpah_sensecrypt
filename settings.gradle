@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // ✅ Add this here too for plugin resolution (optional but safe)
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://repository.liferay.com/nexus/content/repositories/public" }
+    }
+}
+
+rootProject.name = "Demo SeQR Scan"
+
+include ':app'
+include ':AirsnapFaceUI', ':AirsnapFaceCore', ':AirsnapFinger', ':AirsnapFingerUI'
+include ':tensorflow-lite-support', ':tensorflow-lite', ':tensorflow-lite-select-tf-ops'
+include ':T5CryptographClient', ':OmniMatch'

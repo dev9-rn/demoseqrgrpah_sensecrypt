@@ -1,0 +1,16 @@
+{
+    "model_file": "apimenov-g2-exp20-e98-384.tflite",
+    "normalization": "imagenet",
+    "inputs": [
+        {
+            "name": "x",
+            "shape": [384, 384, 3]
+        }
+    ],
+    "outputs": [
+        {
+            "name": "Identity",
+            "shape": [1]
+        }
+    ]
+}

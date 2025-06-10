@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "981061770221",
+    "project_id": "fir-seqr-graph",
+    "storage_bucket": "fir-seqr-graph.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981061770221:android:2304103beb62c071a965e4",
+        "android_client_info": {
+          "package_name": "com.sssl.seqrgraphdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMYtILqbHbMCZIoFWNbFf8mZhlj9qtMqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

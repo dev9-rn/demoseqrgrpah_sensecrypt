@@ -1,0 +1,16 @@
+{
+    "model_file": "at_0055_b0_256x192.tflite",
+    "normalization": "imagenet",
+    "inputs": [
+        {
+            "name": "x",
+            "shape": [256, 192, 3]
+        }
+    ],
+    "outputs": [
+        {
+            "name": "Identity",
+            "shape": [1]
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "backends": ["tflite"],
+
+    "preprocessors": [
+        {
+            "id": "square-crop-x1.5",
+            "type": "square-crop",
+            "side_scale": 1.5,
+            "background": [124, 116, 104]
+        },
+        {
+            "id": "fixed-ratio-crop-0.75-x1.5",
+            "type": "fixed-ratio-crop",
+            "ratio": 0.75,
+            "area_scale": 1.5,
+            "background": [124, 116, 104]
+        },
+        {
+            "id": "crop-x1.7",
+            "type": "crop",
+            "side_scale": 1.7
+        }
+    ],
+
+    "compute": [
+        {
+            "model": "pad/apimenov-g2-exp20-e98-384",
+            "preprocessor": "crop-x1.7"
+        },
+        {
+            "model": "pad/at_0055_b0_256x192",
+            "preprocessor": "fixed-ratio-crop-0.75-x1.5"
+        },
+        {
+            "model": "pad/mk_036_effb0",
+            "preprocessor": "square-crop-x1.5"
+        }
+    ],
+
+    "fuse": {
+        "type": "linear",
+
+        "bias": -7.7895232,
+
+        "weights": {
+            "pad/apimenov-g2-exp20-e98-384": 0.2929179,
+            "pad/at_0055_b0_256x192": 0.3358074,
+            "pad/mk_036_effb0": 0.3712747
+        }
+    }
+}

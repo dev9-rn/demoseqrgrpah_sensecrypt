@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.HomeScreenFragment"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_verifierLoginFragment"
+            app:destination="@id/verifierLoginFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_instituteLoginFragment"
+            app:destination="@id/instituteLoginFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_verifierHomeFragment"
+            app:destination="@id/verifierHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeScreenFragment_to_instituteHomeFragment"
+            app:destination="@id/instituteHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/instituteLoginFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.InstituteLoginFragment"
+        android:label="fragment_institute_login"
+        tools:layout="@layout/fragment_institute_login" >
+        <action
+            android:id="@+id/action_instituteLoginFragment_to_instituteHomeFragment"
+            app:destination="@id/instituteHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifierLoginFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.VerifierLoginFragment"
+        android:label="fragment_verifier_login"
+        tools:layout="@layout/fragment_verifier_login" >
+
+        <action
+            android:id="@+id/action_verifierLoginFragment_to_verifierHomeFragment"
+            app:destination="@id/verifierHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_verifierLoginFragment_to_verifierSignUpFragment"
+            app:destination="@id/verifierSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instituteHomeFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.InstituteHomeFragment"
+        android:label="fragment_institute_home"
+        tools:layout="@layout/fragment_institute_home" >
+        <action
+            android:id="@+id/action_instituteHomeFragment_to_instituteScanFragment"
+            app:destination="@id/instituteScanFragment" />
+        <action
+            android:id="@+id/action_instituteHomeFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_instituteHomeFragment_to_instituteBarCodeScanFragment"
+            app:destination="@id/instituteBarCodeScanFragment" />
+        <action
+            android:id="@+id/action_instituteHomeFragment_to_scanCryptographFragment"
+            app:destination="@id/scanCryptographFragment" />
+        <action
+            android:id="@+id/action_instituteHomeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifierHomeFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.VerifierHomeFragment"
+        android:label="fragment_verifier_home"
+        tools:layout="@layout/fragment_verifier_home" >
+        <action
+            android:id="@+id/action_verifierHomeFragment_to_verifierScanFragment"
+            app:destination="@id/verifierScanFragment" />
+        <action
+            android:id="@+id/action_verifierHomeFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_verifierHomeFragment_to_tabLayoutFragment"
+            app:destination="@id/tabLayoutFragment" />
+        <action
+            android:id="@+id/action_verifierHomeFragment_to_scanCryptographFragment"
+            app:destination="@id/scanCryptographFragment" />
+        <action
+            android:id="@+id/action_verifierHomeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifierScanFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.VerifierScanFragment"
+        android:label="fragment_verifier_scan"
+        tools:layout="@layout/fragment_verifier_scan" >
+        <action
+            android:id="@+id/action_verifierScanFragment_to_viewCertificateFragment"
+            app:destination="@id/viewCertificateFragment"
+            app:popUpTo="@id/verifierScanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/instituteScanFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.InstituteScanFragment"
+        android:label="fragment_institute_scan"
+        tools:layout="@layout/fragment_institute_scan" >
+        <action
+            android:id="@+id/action_instituteScanFragment_to_viewCertificateFragment"
+            app:destination="@id/viewCertificateFragment"
+            app:popUpTo="@id/instituteScanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewCertificateFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.ViewCertificateFragment"
+        android:label="fragment_view_certificate"
+        tools:layout="@layout/fragment_view_certificate" >
+
+        <argument
+            android:name="pdfUrl"
+            app:argType="string"/>
+        <argument
+            android:name="serialNo"
+            app:argType="string" />
+        <argument
+            android:name="key"
+            app:argType="string" />
+        <argument
+            android:name="scanResult"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/tabLayoutFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.TabLayoutFragment"
+        android:label="fragment_tab_layout"
+        tools:layout="@layout/fragment_tab_layout" >
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_viewCertificateFragment"
+            app:destination="@id/viewCertificateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeAccountFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.RemoveAccountFragment"
+        android:label="fragment_remove_account"
+        tools:layout="@layout/fragment_remove_account" >
+        <action
+            android:id="@+id/action_removeAccountFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/verifierSignUpFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.VerifierSignUpFragment"
+        android:label="fragment_verifier_sign_up"
+        tools:layout="@layout/fragment_verifier_sign_up" >
+        <action
+            android:id="@+id/action_verifierSignUpFragment_to_verifierLoginFragment"
+            app:destination="@id/verifierLoginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_verifierSignUpFragment_to_verifierOtpVerificationFragment"
+            app:destination="@id/verifierOtpVerificationFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifierOtpVerificationFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.VerifierOtpVerificationFragment"
+        android:label="fragment_verifier_otp_verification"
+        tools:layout="@layout/fragment_verifier_otp_verification">
+        <argument
+            android:name="id"
+            app:argType="reference"/>
+        <argument
+            android:name="otp"
+            app:argType="reference" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string" />
+        <argument
+            android:name="verifyBy"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_verifierOtpVerificationFragment_to_verifierHomeFragment"
+            app:destination="@id/verifierHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/instituteBarCodeScanFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.InstituteBarCodeScanFragment"
+        android:label="fragment_institute_bar_code_scan"
+        tools:layout="@layout/fragment_institute_bar_code_scan" >
+        <action
+            android:id="@+id/action_instituteBarCodeScanFragment_to_instituteScanDetailsFragment"
+            app:destination="@id/instituteScanDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instituteScanDetailsFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.InstituteScanDetailsFragment"
+        android:label="fragment_institute_scan_details"
+        tools:layout="@layout/fragment_institute_scan_details" >
+        <argument
+            android:name="serial_no"
+            app:argType="string"/>
+        <argument
+            android:name="user_printed"
+            app:argType="string" />
+        <argument
+            android:name="printing_date_time"
+            app:argType="string" />
+        <argument
+            android:name="printer_used"
+            app:argType="string" />
+        <argument
+            android:name="printCount"
+            app:argType="reference" />
+        <argument
+            android:name="scan_result"
+            app:argType="reference" />
+        <argument
+            android:name="key"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanCryptographFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.ScanCryptographFragment"
+        android:label="camerax_layout"
+        tools:layout="@layout/camerax_layout" >
+        <action
+            android:id="@+id/action_scanCryptographFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/scanCryptographFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_scanCryptographFragment_to_verifierHomeFragment"
+            app:destination="@id/verifierHomeFragment"
+            app:popUpTo="@id/scanCryptographFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_scanCryptographFragment_to_instituteHomeFragment"
+            app:destination="@id/instituteHomeFragment"
+            app:popUpTo="@id/scanCryptographFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_scanCryptographFragment"
+            app:destination="@id/scanCryptographFragment"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.sssl.seqrgraphdemo.ui.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_removeAccountFragment"
+            app:destination="@id/removeAccountFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

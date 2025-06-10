@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/setting_icon"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+
+<!--    <item-->
+<!--        android:title="@string/about_us"-->
+<!--        android:id="@+id/about_us"-->
+<!--        />-->
+<!--    <item-->
+<!--        android:title="@string/remove"-->
+<!--        android:id="@+id/remove_account"-->
+<!--        />-->
+<!--    <item-->
+<!--        android:title="@string/logout"-->
+<!--        android:id="@+id/logout"-->
+<!--        />-->
+</menu>

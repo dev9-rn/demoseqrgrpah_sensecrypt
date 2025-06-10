@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "530318805426",
+    "project_id": "crashlytic-seqr-demo",
+    "storage_bucket": "crashlytic-seqr-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530318805426:android:95e225333b77f216b5bcab",
+        "android_client_info": {
+          "package_name": "com.seqrdoccrashalytic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMn9RPoxo8B992A2NMglshMteFUEN9SqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530318805426:android:09f6f84bcfaa5a77b5bcab",
+        "android_client_info": {
+          "package_name": "com.tech5.safetynet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMn9RPoxo8B992A2NMglshMteFUEN9SqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

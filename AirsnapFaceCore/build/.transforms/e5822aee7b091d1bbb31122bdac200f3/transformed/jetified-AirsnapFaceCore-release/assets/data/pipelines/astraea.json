@@ -1,0 +1,159 @@
+{
+    "backends": ["openvino", "tensorflow"],
+
+    "preprocessors": [
+        {
+            "id": "crop-x1.3",
+            "type": "crop",
+            "side_scale": 1.3
+        },
+        {
+            "id": "crop-x1.5",
+            "type": "crop",
+            "side_scale": 1.5
+        },
+        {
+            "id": "crop-x1.8",
+            "type": "crop",
+            "side_scale": 1.8
+        },
+        {
+            "id": "crop-x2.0",
+            "type": "crop",
+            "side_scale": 2
+        },
+        {
+            "id": "square-crop-x1.5",
+            "type": "square-crop",
+            "side_scale": 1.5,
+            "background": [124, 116, 104]
+        },
+        {
+            "id": "square-crop-x1.5-black-bg",
+            "type": "square-crop",
+            "side_scale": 1.5
+        },
+        {
+            "id": "fixed-ratio-crop-0.75-x1.3",
+            "type": "fixed-ratio-crop",
+            "ratio": 0.75,
+            "area_scale": 1.3,
+            "background": [124, 116, 104]
+        },
+        {
+            "id": "fixed-ratio-crop-0.75-x2.0",
+            "type": "fixed-ratio-crop",
+            "ratio": 0.75,
+            "area_scale": 2,
+            "background": [124, 116, 104]
+        },
+        {
+            "id": "fixed-ratio-crop-0.72-x1.5",
+            "type": "fixed-ratio-crop",
+            "ratio": 0.727272,
+            "area_scale": 1.5,
+            "background": [124, 116, 104]
+        }
+    ],
+
+    "compute": [
+        {
+            "model": "pad/aa_n0021b",
+            "preprocessor": "crop-x2.0"
+        },
+        {
+            "model": "pad/ag_131c3",
+            "preprocessor": "original"
+        },
+        {
+            "model": "pad/apimenov-g1-exp19-e95-384",
+            "preprocessor": "crop-x1.3"
+        },
+        {
+            "model": "pad/at_0058_b0_distort",
+            "preprocessor": "fixed-ratio-crop-0.75-x1.3"
+        },
+        {
+            "model": "pad/kp_m002",
+            "preprocessor": "crop-x1.5"
+        },
+        {
+            "model": "pad/mk_039_effb2",
+            "preprocessor": "square-crop-x1.5"
+        },
+        {
+            "model": "pad/apimenov-g1-exp23-e09-384",
+            "preprocessor": "crop-x1.8"
+        },
+        {
+            "model": "pad/at_0011_b3_progressive_val22",
+            "preprocessor": "fixed-ratio-crop-0.75-x2.0"
+        },
+        {
+            "model": "pad/apimenov-a26v4",
+            "preprocessor": "crop-x2.0"
+        },
+        {
+            "model": "pad/at_0053",
+            "preprocessor": "fixed-ratio-crop-0.72-x1.5"
+        },
+        {
+            "model": "pad/apimenov-g1-exp18-e97-384",
+            "preprocessor": "crop-x1.8"
+        },
+        {
+            "model": "pad/mk_024_effb0",
+            "preprocessor": "square-crop-x1.5-black-bg"
+        }
+    ],
+
+    "fuse": {
+        "type": "linear",
+
+        "bias": -2.81,
+        "bias.soft": -2.52277,
+        "bias.hardened": -3.25,
+
+        "bias.desktop": -4.4,
+        "bias.desktop.soft": -3.5,
+        "bias.desktop.hardened": -5.35,
+
+        "weights": {
+            "pad/aa_n0021b": 0,
+            "pad/aa_n0021b.desktop": 0.097122,
+
+            "pad/ag_131c3": 0,
+            "pad/ag_131c3.desktop": 0.43238,
+
+            "pad/apimenov-g1-exp19-e95-384": 0,
+            "pad/apimenov-g1-exp19-e95-384.desktop": 0.172473,
+
+            "pad/at_0058_b0_distort": 0,
+            "pad/at_0058_b0_distort.desktop": 0.087169,
+
+            "pad/kp_m002": 0,
+            "pad/kp_m002.desktop": 0.073209,
+
+            "pad/mk_039_effb2": 0,
+            "pad/mk_039_effb2.desktop": 0.137647,
+
+            "pad/apimenov-g1-exp23-e09-384": 0.0512072,
+            "pad/apimenov-g1-exp23-e09-384.desktop": 0,
+
+            "pad/at_0011_b3_progressive_val22": 0.0256867,
+            "pad/at_0011_b3_progressive_val22.desktop": 0,
+
+            "pad/apimenov-a26v4": 0.0652542,
+            "pad/apimenov-a26v4.desktop": 0,
+
+            "pad/at_0053": 0.0489758,
+            "pad/at_0053.desktop": 0,
+
+            "pad/apimenov-g1-exp18-e97-384": 0.0361912,
+            "pad/apimenov-g1-exp18-e97-384.desktop": 0,
+
+            "pad/mk_024_effb0": 0.075051,
+            "pad/mk_024_effb0.desktop": 0
+        }
+    }
+}

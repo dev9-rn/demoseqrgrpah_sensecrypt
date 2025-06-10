@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.InstituteScanDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:paddingHorizontal="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:backgroundTint="@color/white"
+            android:elevation="8dp">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/barcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Barcode : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/user_printed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User Printed : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/print_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Print Date : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/print_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Printed Time : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/printer_used"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Printer Used : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/print_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Print Count : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="15dp"
+                    android:background="#c0c0c0"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Status : "
+                    android:textSize="17dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    />
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,5 @@
+{
+    "box_detection_model": "detect/ssd",
+    "face_attribute_detection_model": "detect/landmarks",
+    "image_blur_detection_model": "quality/blur_color",
+}

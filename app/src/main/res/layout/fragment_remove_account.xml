@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.RemoveAccountFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/remove_acc_title"
+                android:textSize="19dp"
+                android:lineHeight="30dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Following is the data we store related to your account:"
+                android:textSize="17dp"
+                android:lineHeight="30dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:layout_marginVertical="25dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your basic profiling details like Name, Phone Number, Email-ID and login password."
+                    android:textSize="15dp"
+                    android:lineHeight="25dp"
+                    android:drawableLeft="@drawable/bullet_point"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A log of all your log-ins and logout sessions with timestamp and device-id, for security reasons."
+                    android:textSize="15dp"
+                    android:lineHeight="25dp"
+                    android:drawableLeft="@drawable/bullet_point"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Whenever you scan a document for verification, we maintain your scan history and payment history, if applicable."
+                    android:textSize="15dp"
+                    android:lineHeight="25dp"
+                    android:drawableLeft="@drawable/bullet_point"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If you agree to remove your account, then we will remove all the above data."
+                android:textSize="17dp"
+                android:lineHeight="30dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:layout_marginVertical="25dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Warning: Before you remove your account, as following will be true after that:"
+                android:textSize="17dp"
+                android:lineHeight="30dp"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:layout_marginBottom="25dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/cancel"
+                    android:background="@drawable/cancel"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="Cross Shape" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Any document that you have verified till date, will be removed and will no longer be associated with your account. Thus, you have to re-scan them or/and make re-payments, if applicable."
+                    android:textSize="15dp"
+                    android:lineHeight="25dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/cancel"
+                    android:background="@drawable/cancel"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="Cross Shape" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A log of all your log-ins and logout sessions with timestamp and device-id, for security reasons."
+                    android:textSize="15dp"
+                    android:lineHeight="25dp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/black"
+                android:text="I have read the above and agree with the above conditions." />
+
+            <Button
+                android:id="@+id/remove_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:layout_marginVertical="15dp"
+                app:cornerRadius="100dp"
+                android:backgroundTint="@color/primary"
+                android:text="Remove My Account" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

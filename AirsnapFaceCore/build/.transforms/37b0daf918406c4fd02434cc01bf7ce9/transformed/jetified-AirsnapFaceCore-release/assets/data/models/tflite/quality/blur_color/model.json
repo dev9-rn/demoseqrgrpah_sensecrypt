@@ -1,0 +1,18 @@
+{
+    "model_file": "model_b_v1_f8.tflite",
+    "normalization": "zero-one",
+
+    "inputs": [
+        {
+            "name": "input_1_7",
+            "shape": [224, 224, 3]
+        }
+    ],
+
+    "outputs": [
+        {
+            "name": "dense_1_7/Sigmoid",
+            "shape": [1]
+        }
+    ]
+}

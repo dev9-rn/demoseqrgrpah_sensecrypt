@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.HomeScreenFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            android:textColor="@color/primary"
+            />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="264dp"
+            android:layout_height="257dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="50dp"
+            android:src="@drawable/wwe" />
+
+        <Button
+            android:id="@+id/verifier_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cornerRadius="100dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary"
+            android:paddingVertical="15dp"
+            android:text="SIGN IN AS VERIFIER" />
+
+
+        <Button
+            android:id="@+id/institute_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:paddingVertical="15dp"
+            android:layout_marginVertical="15dp"
+            app:cornerRadius="100dp"
+            android:backgroundTint="@color/secondary"
+            android:text="SIGN IN AS INSITUTE" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

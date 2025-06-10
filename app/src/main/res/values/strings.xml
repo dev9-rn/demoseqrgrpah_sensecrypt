@@ -1,0 +1,501 @@
+<resources>
+    <string name="app_name">Demo SeQR Scan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="form_error">Something went wrong</string>
+
+    <string name="scan_view_certificate">scan and view certificate</string>
+
+    <string name="view_history">view history</string>
+
+    <string name="scan_barcode">scan and view audit trails</string>
+
+    <string name="scan_agian">Scan Again</string>
+
+    <string name="scan_qr_agian">Scan QR Again</string>
+
+    <string name="scan_barcode_agian">Scan Barcode Again</string>
+
+    <string name="about_us">About Us</string>
+
+    <string name="remove">Remove Account</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="aboutus_content">Scube offers a variety of ERP solutions for businesses including banks, e-libraries, document management systems, visa on arrival and land taxation systems etc.</string>
+
+    <string name="eamil_id">software@scube.net.in</string>
+
+    <string name="scube_domain">https://scube.net.in</string>
+
+    <string name="no_record">No Record Found.</string>
+
+    <string name="remove_acc_title">You can remove your account from our solution using this page.</string>
+
+    <string name="remove_dialog_title">Enter Username and Password to proceed</string>
+
+    <string name="forgot_password">Forgot Password</string>
+
+    <string name="certificate_inactive">QR code part of the system. But certificate is inactive now</string>
+
+    <string name="proper_barcode">Please scan proper 1D BarCode</string>
+
+
+    <string name="scan_cryptograph">scan cryptograph</string>
+
+
+    <string name="folder_name">T5Cryptograph</string>
+    <string name="please_wait">Please wait....</string>
+    <string name="title_activity_res">ResActivity</string>
+
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="request_permission">Camera permission required.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="finger_capture_error">Finger capturing issue.</string>
+    <string name="face_capture_error">Face capturing issue.</string>
+    <string name="iso_creation_error">Fail to create iso</string>
+
+    <string name="name_hint">Enter your name *</string>
+    <string name="dob_hint">Date of Birth</string>
+    <string name="country_hint">Nationality</string>
+    <string name="designation_hint">Designation</string>
+    <string name="email_hint">Email ID *</string>
+    <string name="ref_id_hint">Ref ID</string>
+    <string name="gender_hint">Select Gender</string>
+    <string name="marital_status_hint">Marital Status</string>
+    <string name="blood_group_hint">Blood Group</string>
+    <string name="barcode_validity_hint">Cryptograph Validity(In Days)</string>
+    <string name="select_face_text">Capture Face Image</string>
+    <string-array name="gender_list">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="marital_status_list">
+        <item>Marital Status</item>
+        <item>Married</item>
+        <item>Not Married</item>
+    </string-array>
+    <string-array name="blood_group_list">
+        <item>Blood Group</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="validity_list">
+        <item>Cryptograph Validity(In Days)</item>
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>180</item>
+        <item>365</item>
+    </string-array>
+
+
+    <string-array name="compression_list">
+        <item>800</item>
+        <item>900</item>
+        <item>1000</item>
+        <item>1100</item>
+        <item>1200</item>
+    </string-array>
+
+    <string-array name="challenges_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="finger_template_size_list">
+        <item>0</item>
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>230</item>
+        <item>240</item>
+        <item>250</item>
+    </string-array>
+
+    <string-array name="thickness_list">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="grid_sizes_list">
+        <item>6</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="all_permissions">
+        <item>android.permission.WRITE_EXTERNAL_STORAGE</item>
+        <item>android.permission.CAMERA</item>
+        <item>android.permission.READ_EXTERNAL_STORAGE</item>
+    </string-array>
+    <string name="select_combinations">Select Finger Combination(Optional)</string>
+    <string name="choose_code_style">Choose Cryptograph Style</string>
+    <string name="left_four">Left Four Fingers</string>
+    <string name="right_four">Right Four Fingers</string>
+    <string name="left_thumb">Left Thumb</string>
+    <string name="right_thumb">Right Thumb</string>
+    <string name="capture">Capture</string>
+
+    <string name="capture_face">Capture Face Image</string>
+    <string name="fill_data">Please fill your details</string>
+    <string name="done">Done</string>
+    <string name="retake">Retake</string>
+    <string name="close">Close</string>
+    <string name="enroll">Enroll</string>
+    <string name="enroll_error">Enroll task failed.</string>
+    <string name="network_activity_error">Something went wrong&#8230;Please try later!</string>
+    <string name="response_error">Error in server response.Please try later!</string>
+    <string name="bbc_file_creation_error">Cryptograph file creation error</string>
+    <string name="debug_error">Enable Debugging</string>
+    <string name="restart_app_message">SDK Initialisation Successful!! Please Restart App.</string>
+    <string name="ok_message">OK</string>
+    <string name="base_url_hint">Base Url</string>
+    <string name="create_request_url_hint">Enroll User Method</string>
+    <string name="change_url">Save Settings</string>
+    <string name="sdk_initialization_fail_message">SDK Initialisation Failed!! Please Restart App.</string>
+    <string name="finger_sdk_initialization_failed">Finger Client SDK Initialisation Failed!!</string>
+    <string name="demogs_error_message">Something went wrong&#8230;Please adjust camera and try again</string>
+
+    <string name="error_correction_hint">Error Correction</string>
+    <string name="max_finger_template_size">Max Finger Template Size in bytes per finger</string>
+    <string name="user_settings_changed">User settings changed successfully.</string>
+
+    <string name="payload_exceeds_capacity">Your payload exceeded the cryptograph capacity.</string>
+
+    <string name="capture_type">Capture Type</string>
+
+
+    <string name="tech5_hyperlink"><a href='https://tech5.ai/'>&#169;TECH5.ai,</a> </string>
+    <string name="tech5_url">https://tech5.ai/</string>
+    <string name="add_barcode">Add Cryptograph</string>
+    <string name="decode">Decode</string>
+
+    <string name="auto_capture">Auto Capture</string>
+    <string name="manual_capture">Manual Capture</string>
+    <string name="no_barcodes_to_show">No Cryptographs to show</string>
+
+    <string name="processing">Processing</string>
+    <string name="device_processing">Device processing</string>
+    <string name="backend_processing">Backend processing</string>
+
+    <string name="include_face_template">Include face template in Cryptograph</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="code_dimensions">Code Dimensions</string>
+    <string name="code_dims_auto">Auto</string>
+    <string name="code_dims_manual">Manual</string>
+    <string name="code_title">Code Title</string>
+
+    <string name="face_link_setings">FaceLink Settings</string>
+
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+
+    <string name="rows">Rows</string>
+    <string name="cols">Columns</string>
+
+    <string name="use_back_camera">Use Back Camera for Face Capture</string>
+
+    <string name="type_of_data">Type of Data in the Cryptograph</string>
+    <string name="cryptograph_params">Cryptograph Parameters</string>
+
+    <string name="code_item">Code item</string>
+    <string name="quantity">Qty</string>
+    <string name="size">Size\n(bytes)</string>
+    <string name="total">Total\n(bytes)</string>
+    <string name="cryptograph_id">Cryptograph ID</string>
+    <string name="compressed_face_image">Compressed face image</string>
+    <string name="face_biometric_template">Face biometric template</string>
+    <string name="finger_biometric_templates">Fingerprint biometric templates</string>
+    <string name="demographic_data">Demographic data</string>
+    <string name="total_payload">Total payload (bytes)</string>
+    <string name="compression_level">Compression Level</string>
+    <string name="face_liveness_challenge_count">Face liveness challenge count</string>
+
+    <string name="name">Name</string>
+    <string name="value">Value</string>
+    <string name="grid_blocks_x">Grid blocks X (columns)</string>
+    <string name="grid_blocks_y">Grid blocks Y (rows)</string>
+    <string name="style">Style</string>
+    <string name="error_correction">Error correction (percents)</string>
+    <string name="thicknes">Thickness</string>
+    <string name="grid_size">Grid Size</string>
+    <string name="expiry_date">Expiration Date</string>
+    <string name="crypto_capacity">Cryptograph capacity (bytes)</string>
+
+    <string-array name="qty_array">
+        <item>0 </item>
+        <item>1</item>
+    </string-array>
+    <string-array name="crypto_id_size_array">
+        <item>16</item>
+    </string-array>
+
+    <string-array name="finger_print_qty_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="face_biometric_template_quality_array">
+        <item>136</item>
+
+    </string-array>
+
+    <string-array name="crypto_styles_array">
+        <item>Lines</item>
+        <item>Dots</item>
+    </string-array>
+
+    <string-array name="error_correction_percents">
+        <item>14</item>
+        <item>17</item>
+        <item>21</item>
+        <item>25</item>
+        <item>29</item>
+        <item>33</item>
+    </string-array>
+
+    <string-array name="error_correction_values">
+
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+
+    </string-array>
+
+
+    <string name="action_load_config">Load Config</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="liveness_feature">Liveness Feature</string>
+    <string name="finger_sdk_token">License Token</string>
+
+    <string name="face_liveness">Face Liveness</string>
+    <string name="finger_liveness">Finger Liveness</string>
+    <string name="cryptograph_format">Cryptograph Format</string>
+    <string name="cryptograph_format_box">Box</string>
+    <string name="cryptograph_format_strip">Strip</string>
+
+
+    <string name="biometric_modality_configuration">Configure Biometric Modality</string>
+
+    <string-array name="biometric_modality_configurations">
+        <item>Face Image + Face Template</item>
+        <item>Face Image Only</item>
+        <item>Face Image, Face Template,Finger Templates(2)</item>
+        <item>Custom Settings</item>
+    </string-array>
+
+    <string name="security_pin_feature">Security Passcode Feature</string>
+    <string name="security_pin">Security Passcode</string>
+    <string name="enter_pin">Enter Passcode</string>
+    <string name="invalid_pin">Invalid Passcode</string>
+    <string name="proceed">Proceed</string>
+    <string name="verification_failed">Verification Failed</string>
+    <string name="verification_failed_face_liveness">Face identified correctly but it looks like a photograph and not live person.</string>
+    <string name="verification_failed_score">Verification Failed (Score: %1$d )</string>
+    <string name="decryption_failed">Decryption Failed</string>
+
+
+    <string name="get_information">Get Information</string>
+    <string name="hard_soft_info">Hardware and Software Information</string>
+    <string name="serial">SERIAL: </string>
+    <string name="model">MODEL: </string>
+    <string name="id">ID: </string>
+    <string name="manufacturer">MANUFACTURER: </string>
+    <string name="brand">BRAND: </string>
+    <string name="type">TYPE: </string>
+    <string name="user">USER: </string>
+    <string name="base">BASE: </string>
+    <string name="incremental">INCREMENTAL: </string>
+    <string name="sdk">SDK: </string>
+    <string name="board">BOARD: </string>
+    <string name="host">HOST: </string>
+    <string name="fingerprint">FINGERPRINT: </string>
+    <string name="versioncode">VERSION CODE: </string>
+
+    <string name="versions_label">OmniMatch v%1$s, AirSnapFace v%2$s, AirSnapFinger v%3$s </string>
+    <string name="face_link_label">Min.width %1$d,Max.Width %2$d,Box.width %3$d </string>
+
+    <string-array name="fingers">
+
+        <item>left slap</item>
+        <item>right slap</item>
+        <item>left thumb</item>
+        <item>right thumb</item>
+
+    </string-array>
+
+    <string name="crypto_saved">Cryptograph created successfully</string>
+
+    <string name="omnimatch_initializing">Initializing OmniMatch SDK</string>
+    <string name="matching_faces">Matching Faces</string>
+    <string name="matching_fingers">Matching Fingers</string>
+
+    <string name="omnimatch_sdk_version">OmniMatch SDK v:%1$s</string>
+    <string name="match_success">Match Success (%1$.5f)</string>
+    <string name="match_failure">Match Failure (%1$.5f)</string>
+
+
+    <string name="min_face_width">Minimum Face Width</string>
+
+    <string name="max_face_width">Maximum Face Width</string>
+
+    <string name="box_width">Box Width % wrt screen width</string>
+    <string name="base_url">Base Url</string>
+    <string name="face_auto_capture">Face Auto Capture</string>
+    <string name="debug_face_link">Debug Face Link</string>
+    <string name="digital_signature">Digital Signature</string>
+    <string name="face_link_settings">Face Link Settings</string>
+    <string name="cryptograph_settings">Cryptograph Settings</string>
+    <string name="version_info">Version Info</string>
+    <string name="min_width">Min width</string>
+    <string name="max_width">Max width</string>
+    <string name="box_width_settings">Box width</string>
+
+
+    <string name="signature_verified">Verified</string>
+
+
+    <string name="unable_to_decode">Unable to decode : %1$d</string>
+    <string name="unable_to_verify_signature">Unable to verify signature : %1$d</string>
+
+
+    <!--Cryptograph SDK error code description-->
+
+    <!--    public static final int successful = 0;-->
+    <string name="decode_successful">Decoded successfully</string>
+
+
+    <!--    public static final int errorNoInit = 1;-->
+    <string name="crypto_err_no_init">SDK not initialzed ( %1$d )</string>
+
+    <!--    public static final int errorLowMemory = 2;-->
+    <string name="crypto_err_low_memory">In sufficient memory ( %1$d )</string>
+
+
+    <!--    public static final int errorBadLicense = 3;-->
+    <string name="crypto_err_bad_license">Bad license( %1$d )</string>
+
+
+    <!--    public static final int errorLicenseExpired = 4;-->
+    <string name="crypto_err_license_expired">The license has expired ( %1$d )</string>
+
+
+    <!--    public static final int errorWrongParameters = 5;-->
+    <string name="crypto_err_wrong_params">Wrong parameters ( %1$d )</string>
+
+
+    <!--    public static final int errorLowMemoryResult = 6;-->
+    <string name="crypto_err_low_memory_result">In sufficient memory ( %1$d )</string>
+
+
+    <!--    public static final int errorAmallData = 7;-->
+    <string name="crypto_err_small_data">Input data size less than 100 bytes ( %1$d )</string>
+
+
+    <!--    public static final int errorBigData = 8;-->
+    <string name="crypto_err_big_data">Input data size more than 10K bytes ( %1$d )</string>
+
+
+    <!--    public static final int errorEncode = 9;-->
+    <string name="crypto_err_encode">Encode error( %1$d )</string>
+
+
+    <!--    public static final int errorDecode = 10;-->
+    <string name="crypto_err_decode">Data decoding erro ( %1$d )</string>
+
+
+    <!--    public static final int errorSymmetricKey = 11;-->
+    <string name="crypto_err_sym_key">Error in obtaining symmetric key ( %1$d )</string>
+
+
+    <!--    public static final int errorKey = 12;-->
+    <string name="crypto_err_key">Error of key generation ( %1$d )</string>
+
+
+    <!--    public static final int errorBarcodeEmpty = 13;-->
+    <string name="crypto_err_empty_barcode">Cryptograph is empty ( %1$d )</string>
+
+
+    <!--    public static final int errorRowsCount = 14;-->
+    <string name="crypto_err_row_count">Row count error( %1$d )</string>
+
+
+    <!--    public static final int errorColsCount = 15;-->
+    <string name="crypto_err_column_count">Columns count error( %1$d )</string>
+
+
+    <!--    public static final int errorBlocksCount = 16;-->
+    <string name="crypto_err_block_count">Blocks count error( %1$d )</string>
+
+
+    <!--    public static final int errorLoadEncryptingKey = 17;-->
+    <string name="crypto_err_load_enc_key">Load encrypting key Error ( %1$d )</string>
+
+
+    <!--    public static final int errorCreatedEncryptingKey = 18;-->
+    <string name="crypto_err_created_enc_key">Created encryption key error( %1$d )</string>
+
+
+    <!--    public static final int errorNoEncryptingKey = 19;-->
+    <string name="crypto_err_no_enc_key">No encrypting key (%1$d)</string>
+
+
+    <!--    public static final int errorBadCompactData = 20;-->
+    <string name="crypto_err_bad_compact_data">Bad compact representation data ( %1$d )</string>
+
+
+    <!--    public static final int errorJNI = 100;-->
+    <string name="crypto_err_jni_error">JNI error( %1$d )</string>
+
+
+    <!--    public static final int errorBadKey = 21;-->
+    <string name="crypto_err_bad_key">Bad cryptograph key ( %1$d )</string>
+
+
+    <!--    public static final int errorBigBarcode = 22;-->
+    <string name="crypto_err_big_barcode">Big cryptograph Error ( %1$d )</string>
+
+    <!--    public static final int errorWrongExpirytime = 23;-->
+    <string name="crypto_err_wrong_expiry_time">Wrong data validity period parameter ( %1$d )</string>
+
+    <!--    public static final int errorDataExpired = 24;-->
+    <string name="crypto_err_data_expired">Cryptograph expired</string>
+
+    <!--    public static final int errorUnknown = 268435455;-->
+    <string name="crypto_err_unknown">Unknown error ( %1$d )</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="temp_unavalible">These Feature is temporarily unavailable.</string>
+
+
+    <!--Cryptograph SDK error code description-->
+
+</resources>

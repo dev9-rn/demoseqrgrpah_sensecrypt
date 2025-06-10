@@ -1,0 +1,87 @@
+{
+  "barcodeGenerationParameters": {
+    "blockCols": 0,
+    "blockRows": 0,
+    "errorCorrection": {
+      "percents": 17,
+      "value": 6
+    },
+    "gridSize": 8,
+    "thickness": 2,
+    "style": "lines",
+    "expirationDate": {
+      "enabled": true,
+      "value": 31536000
+    },
+    "title": {
+      "text": "TECH5 Cryptograph",
+      "alignment": "center",
+      "location": "top",
+      "offset": 10
+    },
+    "CryptographID": {
+      "qty": 1,
+      "size": 16,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "compressedFaceImage": {
+      "qty": 1,
+      "size": 1200,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "faceBiometricTemplate": {
+      "qty": 1,
+      "size": 136,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "fingerprintBiometricTemplates": {
+      "qty": 2,
+      "size": 184,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "voiceBiometricTemplate": {
+      "qty": 0,
+      "size": 234,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "demographicData": {
+      "qty": 1,
+      "size": 100,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "digitalSignature": {
+      "qty": 0,
+      "size": 100,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "extra": {
+      "qty": 0,
+      "size": 100,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    },
+    "binaryBlob": {
+      "qty": 0,
+      "size": 100,
+      "aes": null,
+      "rsa": null,
+      "pin": false
+    }
+  },
+  "usePGPEncryption": false
+}
