@@ -28,6 +28,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import zxingcpp.BarcodeReader
 import com.sensecrypt.sdk.core.SenseCryptSdkException
+import android.content.Intent
 
 
 class QrScannerActivity : AppCompatActivity() {
@@ -254,13 +255,12 @@ class QrScannerActivity : AppCompatActivity() {
             println("getVerificationCaptureMode -------------")
             if (KeyValueStore().getVerificationCaptureMode(this) == FaceCaptureMode.ActiveCaptureFrontCamera) {
                 println("getVerificationCaptureMode -------------11111")
-                startActivity(
-                    PreScanningActiveCaptureActivity.newIntent(
-                        this,
-                        spBytes,
-                        password,
-                    ),
-                )
+                // 🔹 Redirect directly to ActiveFaceCaptureActivity
+                val intent = Intent(this, ActiveFaceCaptureActivity::class.java).apply {
+                    putExtra(ActiveFaceCaptureActivity.EXTRA_QR_CODE_BYTES, spBytes)
+                    putExtra(ActiveFaceCaptureActivity.EXTRA_PASSWORD, password)
+                }
+                startActivity(intent)
             } else {
                 println("getVerificationCaptureMode -------------12222221")
 //                startActivity(

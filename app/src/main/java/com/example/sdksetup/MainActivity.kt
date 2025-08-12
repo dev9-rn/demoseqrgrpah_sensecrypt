@@ -21,6 +21,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import com.sensecrypt.sdk.core.ActiveFaceCaptureSession
 import com.sensecrypt.sdk.core.SenseCryptSdkException
 import com.sensecrypt.sdk.core.initOfflineSdk
 import com.sensecrypt.sdk.core.SensePrintInfo
@@ -29,6 +30,24 @@ import com.sensecrypt.sdk.core.parseSenseprintBytes
 class MainActivity : ComponentActivity() {
 
     companion object {
+
+
+        /**
+         * Gets a new active face capture session
+         *
+         * @return The active face capture session
+         * @throws SenseCryptSdkException
+         */
+        @kotlin.jvm.Throws(SenseCryptSdkException::class)
+        fun getActiveFaceCaptureSession(): ActiveFaceCaptureSession {
+            try {
+                return ActiveFaceCaptureSession()
+            } catch (e: SenseCryptSdkException) {
+                throw e
+            }
+        }
+
+
         /**
          * Get the QR code info from the decoded QR code bytes.
          * This doesn't decrypt the SensePrint.

@@ -2,13 +2,11 @@ package com.example.sdksetup
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sdksetup.ActivityPreScanningFrontCameraBinding
 
 class PreScanningActiveCaptureActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPreScanningFrontCameraBinding
+    private lateinit var binding: ActiveFaceCaptureSessionListener
 
 
 
