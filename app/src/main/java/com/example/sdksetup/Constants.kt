@@ -16,5 +16,10 @@ class Constants {
          * will be able to use the SenseCrypt SDK
          */
         val SENSEPRINT_VERIFIER_AUTH_KEY: String? = null
+
+        /**
+         * The probability threshold for liveness detection
+         */
+        const val LIVENESS_THRESHOLD = 0.5f
     }
 }

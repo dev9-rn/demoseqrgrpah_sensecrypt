@@ -144,9 +144,9 @@ class ActiveFaceCaptureAnalyzer(
                     }
                 } catch (e: SenseCryptSdkException) {
                     if (!session.isErrorNotified()) {
-//                        listener.onProcessingError(
-//                            e,
-//                        )
+                        listener.onProcessingError(
+                            e,
+                        )
                     }
                 }
             }

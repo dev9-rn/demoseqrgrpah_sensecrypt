@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,10 +23,19 @@ import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
 import com.sensecrypt.sdk.core.ActiveFaceCaptureSession
+import com.sensecrypt.sdk.core.ActiveFaceCaptureStateName
+import com.sensecrypt.sdk.core.DecryptedSensePrintData
+import com.sensecrypt.sdk.core.HeadPose
+import com.sensecrypt.sdk.core.LivenessErrorReason
 import com.sensecrypt.sdk.core.SenseCryptSdkException
 import com.sensecrypt.sdk.core.initOfflineSdk
 import com.sensecrypt.sdk.core.SensePrintInfo
+import com.sensecrypt.sdk.core.SensePrintRawVerificationMobileRequest
 import com.sensecrypt.sdk.core.parseSenseprintBytes
+import com.example.sdksetup.SessionHolder
+import com.sensecrypt.sdk.core.LivenessToleranceSchema
+import com.sensecrypt.sdk.core.OsSchema
+import com.sensecrypt.sdk.core.checkLiveness
 
 class MainActivity : ComponentActivity() {
 
@@ -63,7 +73,150 @@ class MainActivity : ComponentActivity() {
                 qrCodeDecodedBytes,
                 Constants.SENSEPRINT_VERIFIER_AUTH_KEY,
             )
+
+        val showCurrentHeadPose =
+            setOf(
+                ActiveFaceCaptureStateName.WAITING_FOR_FIRST_CENTERED_FACE,
+            )
+
+        /**
+         * Get the resource id for the string for a head pose
+         */
+        val currentHeadPoseInstructionsMap =
+            mapOf(
+                HeadPose.NORMAL to R.string.empty_string,
+                HeadPose.TOO_FAR to R.string.move_closer,
+                HeadPose.LOOKING_LEFT to R.string.look_left,
+                HeadPose.LOOKING_RIGHT to R.string.look_right,
+                HeadPose.LOOKING_UP to R.string.look_down,
+                HeadPose.LOOKING_DOWN to R.string.look_up,
+                HeadPose.TILTED_LEFT to R.string.look_straight,
+                HeadPose.TILTED_RIGHT to R.string.look_straight,
+                HeadPose.TOO_CLOSE to R.string.move_further,
+                HeadPose.NOT_CENTERED to R.string.center_your_face,
+                HeadPose.LOOKING_TOP_LEFT to R.string.look_straight,
+                HeadPose.LOOKING_TOP_RIGHT to R.string.look_straight,
+                HeadPose.LOOKING_BOTTOM_LEFT to R.string.look_straight,
+                HeadPose.LOOKING_BOTTOM_RIGHT to R.string.look_straight,
+            )
+
+        /**
+         * Get the resource id for the string for an active capture state name
+         */
+        val activeFaceCaptureTextMap =
+            mapOf(
+                ActiveFaceCaptureStateName.USER_SHOULD_STAY_STILL to R.string.stay_still,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_TO_THE_LEFT to R.string.look_left,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_TO_THE_RIGHT to R.string.look_right,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_UP to R.string.look_up,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_DOWN to R.string.look_down,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_TOP_LEFT to R.string.look_top_left,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_TOP_RIGHT to R.string.look_top_right,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_BOTTOM_LEFT to R.string.look_bottom_left,
+                ActiveFaceCaptureStateName.USER_SHOULD_LOOK_BOTTOM_RIGHT to R.string.look_bottom_right,
+                ActiveFaceCaptureStateName.USER_SHOULD_MOVE_CLOSER to R.string.move_closer,
+                ActiveFaceCaptureStateName.USER_SHOULD_MOVE_FARTHER to R.string.move_further,
+                ActiveFaceCaptureStateName.USER_SHOULD_CENTER_THEIR_FACE to R.string.center_your_face,
+                ActiveFaceCaptureStateName.ACTIVE_FACE_CAPTURE_COMPLETE to R.string.we_got_all,
+            )
+
+        /**
+         * Set of states that should show center face message based on the current head pose
+         * (if the pose is not normal)
+         */
+        val checkHeadPose =
+            setOf(
+                ActiveFaceCaptureStateName.USER_SHOULD_STAY_STILL,
+            )
+
+        fun <K, V> Map<K, V>.toSerializable(): HashMap<String, String> {
+            val map = HashMap<String, String>()
+            for ((key, value) in this) {
+                map[key as String] = value as String
+            }
+            return map
+        }
+
+        /**
+         * Check if the face is live or not
+         * @param imageBytes image byte data
+         * @return true if face is live or if SDKMode is Online
+         */
+        @Throws(SenseCryptSdkException::class)
+        fun isLiveFace(imageBytes: ByteArray,context: Context):Boolean {
+            return try {
+                checkLiveness(imageBytes,
+                    OsSchema.ANDROID,
+                    LivenessToleranceSchema.REGULAR,Constants.LIVENESS_THRESHOLD)
+
+            } catch (e: Exception) {
+                throw e
+            }
+
+        }
+
+        /**
+         * Decrypt the SensePrint data using the capture session, and the QR code bytes
+         * (SensePrint bytes)
+         *
+         * @param sensePrintBytes The SensePrint bytes (read from the QR code)
+         * @param password The password
+         * @param sessionHolder The session holder containing the active or passive face capture session
+         *
+         * @return The parsed (and decrypted) SensePrint data
+         * @throws SenseCryptSdkException
+         */
+        @Throws(SenseCryptSdkException::class)
+        fun verifySensePrint(
+            context: Context,
+            sensePrintBytes: ByteArray,
+            password: String?,
+            sessionHolder: SessionHolder,
+        ): DecryptedSensePrintData {
+            // Get the best face from the session
+            val face = sessionHolder.getBestFrame()
+
+            val spInfo = parseSensePrintBytes(sensePrintBytes)
+            if (spInfo != null && spInfo.isLivenessEnabled) {
+                /**
+                 * If sdk is running in offline mode then the liveness check is done locally
+                 */
+
+                    try {
+                        val isLiveFace = isLiveFace(face, context)
+                        print("Liveness check result: $isLiveFace")
+
+                        if (!isLiveFace) {
+                            throw SenseCryptSdkException.LivenessFailed(LivenessErrorReason.UNKNOWN_ERROR)
+                        }
+                    } catch (e: SenseCryptSdkException) {
+                        Log.d("Liveness Failed", "Liveness check result had an exception: ${e.message}")
+                        throw e
+                    }
+
+            }
+
+            val requestSchema =
+                SensePrintRawVerificationMobileRequest(
+                    password = password,
+                    senseprint = sensePrintBytes,
+                    verifiersAuthKey = Constants.SENSEPRINT_VERIFIER_AUTH_KEY,
+                    livenessTolerance = null,
+                )
+
+            return try {
+                sessionHolder.verifySensePrint(requestSchema)
+            } catch (e: SenseCryptSdkException) {
+                throw e
+            }
+        }
     }
+
+    /**
+     * Set of states that should show center face message based on the current head pose
+     * (regardless of the pose)
+     */
+
 
     private var permissionGranted by mutableStateOf(false)
 
