@@ -1,1 +1,2 @@
 *.aar filter=lfs diff=lfs merge=lfs -text
+OmniMatch/android-wrapper-4.5.1.aar filter=lfs diff=lfs merge=lfs -text
