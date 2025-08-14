@@ -79,9 +79,9 @@
                         android:id="@+id/scan_cryptograph"
                         android:layout_width="match_parent"
                         android:layout_height="160dp"
-                        android:paddingBottom="35dp"
-                        android:paddingTop="10dp"
                         android:layout_gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="35dp"
                         android:src="@drawable/cryptograph" />
 
                     <TextView
@@ -119,6 +119,35 @@
                         android:text="@string/scan_barcode"
                         android:layout_gravity="bottom"
                         android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center_horizontal"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/white"
+                    android:elevation="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivVerifier"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="40dp"
+                        android:src="@drawable/seqr_graph" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scan_seqr_graph"
+                        android:textSize="20dp"
+                        android:layout_gravity="bottom"
                         android:textColor="@color/black"
                         android:layout_marginVertical="10dp"
                         android:gravity="center_horizontal"/>
